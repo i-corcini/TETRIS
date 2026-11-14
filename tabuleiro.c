@@ -48,6 +48,17 @@ void limpar_linhas(Jogo *j) {
         j->pontos += 800;
 }
 
+void finalizar_peca(Jogo *j) {
+    fixar_peca(j);
+    limpar_linhas(j);
+
+    nova_peca(j);
+
+    if (!pode_mover(j, 0, 0, j->atual.matriz)) {
+        j->fim = 1;
+    }
+}
+
 void desenhar(Jogo *j) {
     int i, k;
     int ocupado;
