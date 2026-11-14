@@ -1,8 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 #include "tabuleiro.h"
 #include "tetraminos.h"
+#include "movimentacao.h"
+
+void inicializar(Jogo *j) {
+    int i, k;
+
+    for (i = 0; i < ALTURA; i++) {
+        for (k = 0; k < LARGURA; k++) {
+            j->tabuleiro[i][k] = 0;
+        }
+    }
+
+    j->pontos = 0;
+    j->linhas = 0;
+    j->fim = 0;
+}
 
 void limpar_linhas(Jogo *j) {
     int i, k, linha;
