@@ -1,0 +1,19 @@
+#define ALTURA 20
+#define LARGURA 10
+
+typedef struct {
+    int tabuleiro[ALTURA][LARGURA];
+    Peca atual;
+    int pontos;
+    int linhas;
+    int fim;
+} Jogo;
+
+void limpar_linhas(Jogo *j);
+
+void desenhar(Jogo *j)
+
+
+
+
+
