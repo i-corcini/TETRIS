@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int pode_mover(Jogo *j, int dx, int dy, int matriz[TAM][TAM]);
+int pode_mover(Jogo *j, int dx, int dy, int matriz[4][4]);
 
 void mover(Jogo *j, int dx, int dy);
 
