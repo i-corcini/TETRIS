@@ -1,4 +1,8 @@
 //igor
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "tabuleiro.h"
 #include "tetraminos.h"
 
 typedef struct {
