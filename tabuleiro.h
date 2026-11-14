@@ -1,25 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include "tabuleiro.h"
-#include "tetraminos.h"
+#ifndef TABULEIRO_H
+#define TABULEIRO_H
 
-#define ALTURA 20
-#define LARGURA 10
+#include "jogo.h"
 
-typedef struct {
-    int tabuleiro[ALTURA][LARGURA];
-    Tetramino atual;
-    int pontos;
-    int linhas;
-    int fim;
-} Jogo;
-
+void inicializar(Jogo *j);
 void limpar_linhas(Jogo *j);
-
 void finalizar_peca(Jogo *j);
+void desenhar(Jogo *j);
 
-void desenhar(Jogo *j)
+#endif
 
 
 
