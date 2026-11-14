@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <time.h>
+#include <allegro5/allegro.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include "gravidade.h"
 #include "tetraminos.h"
@@ -7,6 +9,8 @@
 #include "tabuleiro.h"
 #include "pontuacao.h"
 #include "window.h"
+
+
 
 int main(void) {
     Jogo jogo;
