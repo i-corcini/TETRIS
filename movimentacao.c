@@ -1,11 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include "tetraminos.h"
-#include "tabuleiro.h"
+#include "movimentacao.h"
 
-int pode_mover(Jogo *j, int dx, int dy,
-               int matriz[TAM][TAM]) {
+int pode_mover(Jogo *j, int dx, int dy, int matriz[TAM][TAM]) {
     int i, k;
     int nx, ny;
 
