@@ -1,11 +1,12 @@
-#include<stdio.h>
-#include<time.h>
-#include<stdlib.h>
-#include"gravidade.h"
-#include"tetraminos.h"
-#include"movimentacao.h"
-#include"tabuleiro.h"
-#include"pontuacao.h"
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+#include "gravidade.h"
+#include "tetraminos.h"
+#include "movimentacao.h"
+#include "tabuleiro.h"
+#include "pontuacao.h"
+#include "window.h"
 
 int main(void) {
     Jogo jogo;
