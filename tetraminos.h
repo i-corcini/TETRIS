@@ -1,10 +1,9 @@
 //igor
+#ifndef TETRAMINOS_H
+#define TETRAMINOS_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include "tabuleiro.h"
-#include "tetraminos.h"
+#include "jogo.h"
 
-#define TAM 4
 void nova_peca(Jogo *j);
+
+#endif
