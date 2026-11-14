@@ -9,7 +9,7 @@
 
 typedef struct {
     int tabuleiro[ALTURA][LARGURA];
-    Peca atual;
+    Tetramino atual;
     int pontos;
     int linhas;
     int fim;
