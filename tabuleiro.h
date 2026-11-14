@@ -1,3 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "tabuleiro.h"
+#include "tetraminos.h"
+
 #define ALTURA 20
 #define LARGURA 10
 
