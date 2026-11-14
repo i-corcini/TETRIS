@@ -1,0 +1,19 @@
+TETRIS - VERSÃO 2 (TERMINAL)
+
+Versão modular para terminal, sem Allegro. Inclui fila circular para as
+próximas peças, pilha sequencial para desfazer por peça, pontuação e gravidade.
+O tabuleiro tem 40 linhas e 10 colunas.
+
+Compilação (PowerShell, nesta pasta):
+  gcc -std=c11 -Wall -Wextra main.c tabuleiro.c tetraminos.c movimentacao.c pontuacao.c gravidade.c -o tetris_terminal.exe
+
+Execução:
+  .\tetris_terminal.exe
+
+Controles:
+  A/D: mover; W/E: girar; S: descer; espaço: queda rápida; U: desfazer
+  P: pausar; V: alternar vista; R: reiniciar; Q: sair.
+
+Testes de lógica:
+  gcc -std=c11 -Wall -Wextra -I. tests/testar_logica.c tabuleiro.c tetraminos.c movimentacao.c pontuacao.c gravidade.c -o testes.exe
+  .\testes.exe

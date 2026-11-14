@@ -1,0 +1,13 @@
+TETRIS - VERSÃO 1 (LEGADO)
+
+Código original usado como referência. Arquivo único em C, sem Allegro.
+Esta pasta foi mantida para comparar o início do projeto com as outras versões.
+
+Compilação (PowerShell, nesta pasta):
+  gcc "modelomurilo[v7].c" -o tetris_legado.exe
+
+Execução:
+  .\tetris_legado.exe
+
+Controles: A e D movimentam; W gira; S desce; espaço faz a queda rápida; Q sai.
+A versão original usa entrada por comando, com Enter.

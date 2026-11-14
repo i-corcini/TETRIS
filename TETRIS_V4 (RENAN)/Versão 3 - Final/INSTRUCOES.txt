@@ -1,0 +1,30 @@
+TETRIS - VERSÃO 3 (FINAL)
+
+Versão gráfica tradicional, sem poderes especiais. Inclui menu, dificuldade,
+altura de 20 a 40 linhas, largura de 8 a 16 colunas e tela cheia.
+A fila circular armazena as cinco próximas peças. A pilha guarda os estados
+para desfazer por peça. Há música, efeitos sonoros e animações.
+
+Antes de compilar:
+  Instalar GCC e Allegro 5 no MSYS2 UCRT64. Manter a pasta assets junto do executável.
+
+Compilação (PowerShell, nesta pasta):
+  gcc -std=c11 -Wall -Wextra main.c tabuleiro.c tetraminos.c movimentacao.c pontuacao.c gravidade.c efeitos.c sons.c window.c -o tetris_v3_final.exe -lallegro_acodec -lallegro_audio -lallegro_ttf -lallegro_font -lallegro_primitives -lallegro -lm
+
+Execução:
+  .\tetris_v3_final.exe
+
+Também é possível usar compilar_e_abrir.bat.
+
+Controles:
+  A/D ou setas: mover; W/E: girar; S: descer; espaço: queda rápida
+  U: desfazer; P: pausar; R: reiniciar; V: zoom; F11: tela cheia
+  M: música; N: efeitos sonoros.
+
+Testes da lógica:
+  gcc -std=c11 -Wall -Wextra -I. tests/testar_logica.c tabuleiro.c tetraminos.c movimentacao.c pontuacao.c gravidade.c -o testes_logica.exe
+  .\testes_logica.exe
+
+Testes das animações:
+  gcc -std=c11 -Wall -Wextra -I. tests/testar_animacoes.c tabuleiro.c tetraminos.c movimentacao.c pontuacao.c gravidade.c efeitos.c -o testes_animacoes.exe
+  .\testes_animacoes.exe

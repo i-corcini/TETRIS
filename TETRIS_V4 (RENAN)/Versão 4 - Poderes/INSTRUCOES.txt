@@ -1,0 +1,33 @@
+TETRIS - VERSÃO 4 (PODERES)
+
+Baseada na Versão 3, com blocos especiais. A lista sequencial estática
+controla até 64 poderes fixados no tabuleiro. Cada bloco especial possui
+símbolo e tempo próprio. Quando uma sequência de cinco blocos passa por ele,
+o efeito é ativado.
+
+Poderes: gelo pausa a gravidade; raio remove uma linha; bônus acrescenta pontos.
+O primeiro tetraminó já traz um bloco especial para facilitar os testes.
+
+Antes de compilar:
+  Instalar GCC e Allegro 5 no MSYS2 UCRT64. Manter a pasta assets junto do executável.
+
+Compilação (PowerShell, nesta pasta):
+  gcc -std=c11 -Wall -Wextra main.c tabuleiro.c tetraminos.c movimentacao.c pontuacao.c gravidade.c poderes.c efeitos.c sons.c window.c -o tetris_v4_poderes.exe -lallegro_acodec -lallegro_audio -lallegro_ttf -lallegro_font -lallegro_primitives -lallegro -lm
+
+Execução:
+  .\tetris_v4_poderes.exe
+
+Também é possível usar compilar_e_abrir.bat.
+
+Controles:
+  A/D ou setas: mover; W/E: girar; S: descer; espaço: queda rápida
+  U: desfazer; P: pausar; R: reiniciar; V: zoom; F11: tela cheia
+  M: música; N: efeitos; F7: reduzir o prazo dos poderes para testes.
+
+Testes da lógica:
+  gcc -std=c11 -Wall -Wextra -I. tests/testar_logica.c tabuleiro.c tetraminos.c movimentacao.c pontuacao.c gravidade.c poderes.c -o testes_logica.exe
+  .\testes_logica.exe
+
+Testes das animações:
+  gcc -std=c11 -Wall -Wextra -I. tests/testar_animacoes.c tabuleiro.c tetraminos.c movimentacao.c pontuacao.c gravidade.c poderes.c efeitos.c -o testes_animacoes.exe
+  .\testes_animacoes.exe
