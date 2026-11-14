@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "tabuleiro.h"
+#include "tetraminos.h"
 
 void limpar_linhas(Jogo *j) {
     int i, k, linha;
